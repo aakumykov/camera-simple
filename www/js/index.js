@@ -18,9 +18,9 @@ app.controller("CameraController", ['$scope', function($scope){
 				sourceType: Camera.PictureSourceType.CAMERA,
 				destinationType: Camera.DestinationType.FILE_URI,
                 correctOrientation: true,
-                // targetWidth: 100,
-                // targetHeight: 100,
-                //saveToPhotoAlbum: true,
+                targetWidth: 300,
+                targetHeight: 300,
+                saveToPhotoAlbum: true,
                 // cameraDirection: Camera.Direction.BACK,
                 // cameraDirection: Camera.Direction.FRONT,
 			}
