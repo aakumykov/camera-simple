@@ -47,7 +47,8 @@ function onSuccess(imageURI) {
     console.info('onSuccess(): SUCCESS');
     
     var image = document.getElementById('photo');
-        image.src = "data:image/jpeg;base64," + imageURI;
+        //image.src = "data:image/jpeg;base64," + imageURI;
+        image.src = imageURI;
 }
 
 function onFail(message) {
