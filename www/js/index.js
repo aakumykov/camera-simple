@@ -2,7 +2,7 @@
 
 var app = angular.module("CameraApp",[]);
 
-app.controller("CameraController", function($scope){
+app.controller("CameraController", ['$scope', function($scope){
 	$scope.title = "Photocamera";
 	$scope.photo_src = '';
 	$scope.takeAPhoto = function(){
@@ -29,7 +29,7 @@ app.controller("CameraController", function($scope){
     $scope.onFail = function(message) {
         console.error('onFail(): '+message);
     }
-});
+}]);
 
 
 // document.addEventListener(

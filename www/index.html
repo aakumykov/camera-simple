@@ -10,7 +10,7 @@
         <title>Hello World</title>
     </head>
     <!--<body ng-app="CameraApp" ng-controller="CameraController as camCtrl"> -->
-    <body ng-app="CameraApp" ng-controller="CameraController">
+    <body ng-app="CameraApp" ng-controller="CameraController as camCtrl" ng-strict-di>
         <fieldset>
             <legend>{{title}}</legend>
             <p><img ng-src="{{photo_src}}" alt='photo will be here' id='photo'></p>
