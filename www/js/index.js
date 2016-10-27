@@ -9,31 +9,27 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.getElementById('photo_button').addEventListener('click', function(){
+            console.log('photo_button click...');
+
+            takeAPhoto();
+        });
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        console.log('device is ready');
         console.log('camera: '+navigator.camera);
     },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
 };
 
 app.initialize();
 
 function takeAPhoto(){
+    console.log('takeAPhoto()');
+
     navigator.camera.getPicture(
         onSuccess, 
         onFail, 
@@ -48,11 +44,12 @@ function takeAPhoto(){
 }
 
 function onSuccess(imageURI) {
-    console.info('SUCCESS');
-    var image = document.getElementById('myImage');
-    image.src = "data:image/jpeg;base64," + imageURI;
+    console.info('onSuccess(): SUCCESS');
+    
+    var image = document.getElementById('photo');
+        image.src = "data:image/jpeg;base64," + imageURI;
 }
 
 function onFail(message) {
-    console.error(message);
+    console.error('onFail(): '+message);
 }
