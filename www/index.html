@@ -11,9 +11,11 @@
     </head>
     <body ng-controller="CameraController as camCtrl" ng-strict-di>
         <fieldset>
-            <legend>{{title}} {{camCtrl.surname}}</legend>
+            <legend>{{title}} ({{camCtrl.surname}})</legend>
             <p><input type='text' ng-model='camCtrl.surname'></p>
+            
             <p><img ng-src="{{photo_src}}" alt='photo will be here' id='photo'></p>
+            
             <p><button id='photo_button' ng-click="takeAPhoto()">Take a photo</button></p>
         </fieldset>
 
