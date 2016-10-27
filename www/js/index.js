@@ -4,7 +4,10 @@ var app = angular.module("CameraApp",[]);
 
 app.controller("CameraController", ['$scope', function($scope){
 	$scope.title = "Photocamera";
-	$scope.photo_src = '';
+    this.surname = '@SURNAME';
+    
+    $scope.photo_src = '';
+
 	$scope.takeAPhoto = function(){
 		console.log('takeAPhoto()');
 
@@ -32,10 +35,11 @@ app.controller("CameraController", ['$scope', function($scope){
 }]);
 
 
-// document.addEventListener(
-//     'deviceready',
-//     function(){
-//         angular.bootstrap(document, ['CameraApp']);
-//     },
-//     false
-// );
+document.addEventListener(
+    'deviceready',
+    function(){
+        console.log('deviceready, bootstraping Angular...')
+        angular.bootstrap(document, ['CameraApp']) && console.log('...OK');
+    },
+    false
+);
