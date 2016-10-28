@@ -1,7 +1,8 @@
 'use strict';
 
 function CameraController(){
-
+	this.title = "Фотокамера";
+	this.surname = device.platform;
 }
 
 angular.module('CameraModule',[]).
