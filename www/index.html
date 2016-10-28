@@ -9,24 +9,15 @@
         <meta charset="UTF-8">
         <title>Простая фотокамера</title>
     </head>
-    <body ng-controller="CameraController as camCtrl" ng-strict-di>
-        <fieldset>
-            <legend>{{camCtrl.title}} ({{camCtrl.surname}})</legend>
-            
-            <!-- <p><input type='text' ng-model='camCtrl.surname'></p> -->
-            
-            <p><img 
-                id='photo' 
-                alt='photo will be here' 
-                ng-src="{{photo_src}}" 
-                ng-show="photo_src!==''" 
-            ></p>
-            
-            <p><button id='photo_button' ng-click="takeAPhoto()">Take a photo</button></p>
-        </fieldset>
+    <body ng-strict-di>
+        <camera></camera>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/angular.js"></script>
+        
+        <script type="text/javascript" src="camera/camera.module.js"></script>
+        <script type="text/javascript" src="camera/camera.component.js"></script>
+
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
