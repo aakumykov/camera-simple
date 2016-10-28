@@ -19,21 +19,25 @@ app.controller("CameraController", ['$scope', function($scope){
 			{ 
 				quality: 50,
 				encodingType: Camera.EncodingType.JPEG,
-				sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-				//sourceType: Camera.PictureSourceType.CAMERA,
+				//sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+				sourceType: Camera.PictureSourceType.CAMERA,
 				destinationType: Camera.DestinationType.FILE_URI,
+                targetWidth: 300,
+                targetHeight: 300,
+                saveToPhotoAlbum: true,
+                // cameraDirection: Camera.Direction.BACK,
+                // cameraDirection: Camera.Direction.FRONT,
 			}
 		);
 	}
 
     $scope.onSuccess = function(imageURI) {
         console.info('onSuccess(): SUCCESS');
-        
-        console.log('OLD photo_src: '+$scope.photo_src.substr(0,100));
 
-        document.getElementById('photo').src = $scope.photo_src = "data:image/jpeg;base64," + imageURI;
+        //var src = "data:image/jpeg;base64," + imageURI;
+        var src = imageURI;
 
-        console.log('NEW photo_src: '+$scope.photo_src.substr(0,100));
+        document.getElementById('photo').src = $scope.photo_src = src;
     }
 
     $scope.onFail = function(message) {
