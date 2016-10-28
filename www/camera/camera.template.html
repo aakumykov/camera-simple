@@ -1,17 +1,14 @@
 <fieldset>
     <legend>{{camCtrl.title}} ({{camCtrl.platform}})</legend>
     
-    <!-- <p><input type='text' ng-model='camCtrl.platform'></p> -->
-    <!-- <p><input type='text' ng-model='camCtrl.dimensions'></p> -->
-    
-    <!-- <select ng-options="item as item.label for item in items track by item.id" ng-model="selected"></select> -->
-
     <p>
-        <select ng-model="camCtrl.options.dimension">
-            <option ng-repeat='dim in camCtrl.dimensions'>{{dim}}</option>
-        </select>
+        <label>Размер:
+            <select ng-model="camCtrl.options.dimension">
+                <option ng-repeat='dim in camCtrl.dimensions'>{{dim}}</option>
+            </select>
+        </label>
+        <span> (сейчас: {{camCtrl.options.dimension}})</span>
     </p>
-    <div>currentDimension: {{camCtrl.options.dimension}}</div>
 
     <p><img 
         id='photo' 

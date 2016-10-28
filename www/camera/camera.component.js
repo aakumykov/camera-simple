@@ -3,16 +3,16 @@
 function CameraController(){
 	this.title = "Фотокамера";
 	this.platform = device.platform;
-
-	this.options = {
-		dimension: 'qwerty',
-	};
-
+ 
 	this.dimensions = [
 		'320x240',
 		'640x480',
 		'800x600'
 	];
+
+	this.options = {
+		dimension: this.dimensions[0],
+	};
 
 	// this.options: {
 	//	dimensions: {
