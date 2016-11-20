@@ -5,13 +5,15 @@ function CameraController(){
 	this.platform = device.platform;
  
 	this.dimensions = [
+		'80x60',
+		'160x120',
 		'320x240',
 		'640x480',
 		'800x600'
 	];
 
 	this.options = {
-		dimension: this.dimensions[0],
+		dimension: this.dimensions[2],
 	};
 
 
