@@ -8,18 +8,18 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "ru.andrey.simplecameracomponent"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "ru.andrey.simplecameracomponent"
+            "PACKAGE_NAME": "ru.andrey.camerasimple"
         },
         "cordova-plugin-camera": {
-            "PACKAGE_NAME": "ru.andrey.simplecameracomponent"
+            "PACKAGE_NAME": "ru.andrey.camerasimple"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "ru.andrey.camerasimple"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "ru.andrey.simplecameracomponent"
+            "PACKAGE_NAME": "ru.andrey.camerasimple"
         }
     }
 }
