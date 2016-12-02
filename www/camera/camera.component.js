@@ -3,6 +3,8 @@
 function CameraController(){
 	this.title = "Фотокамера";
 	this.platform = device.platform;
+
+		console.log('device.platform: '+device.platform);
  
 	this.dimensions = [
 		'80x60',

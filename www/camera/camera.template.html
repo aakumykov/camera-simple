@@ -1,25 +1,26 @@
-<div id='device' class='float'>{{camCtrl.title}} ({{camCtrl.platform}})</div>
+<!-- new begin -->
+<img id='photo' alt='photo will be here' ng-src="{{camCtrl.photo_src}}" ng-show="camCtrl.photo_src!==''">
 
-<div id='options' class='float'>
+<div id='info' class='over'>
+    <ul>
+        <li>{{camCtrl.title}}</li>
+        <li>{{camCtrl.platform}}</li>
+    </ul>
+</div>
+
+<div id='options' class='over'>
     <label>Размер:
         <select ng-model="camCtrl.options.dimension">
             <option ng-repeat='dim in camCtrl.dimensions'>{{dim}}</option>
         </select>
     </label>
-    <span> (сейчас: {{camCtrl.options.dimension}})</span>
+    <div> (сейчас: {{camCtrl.options.dimension}})</div>
 </div>
 
-<!-- <div id='photo_place'> -->
-    <img 
-        id='photo' 
-        alt='photo will be here' 
-        ng-src="{{camCtrl.photo_src}}" 
-        ng-show="camCtrl.photo_src!==''" 
-    >
-<!-- </div> -->
-    
-<button 
-    id='photo_button' 
-    class='float' 
-    ng-click="camCtrl.takeAPhoto()" 
->Take a photo</button>
+<button id='photo_button' class='over' ng-click="camCtrl.takeAPhoto()">Сфотать</button>
+
+<!-- <div class='cordova-plugin-camera over'>
+    <video src="video/iphone7plus.mp4"></video>
+    <button>Сфотать</button>
+</div> -->
+<!-- new end -->
