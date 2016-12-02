@@ -1,24 +1,25 @@
-<fieldset>
-    <legend>{{camCtrl.title}} ({{camCtrl.platform}})</legend>
-    
-    <p>
-        <label>Размер:
-            <select ng-model="camCtrl.options.dimension">
-                <option ng-repeat='dim in camCtrl.dimensions'>{{dim}}</option>
-            </select>
-        </label>
-        <span> (сейчас: {{camCtrl.options.dimension}})</span>
-    </p>
+<div id='device' class='float'>{{camCtrl.title}} ({{camCtrl.platform}})</div>
 
-    <p><img 
+<div id='options' class='float'>
+    <label>Размер:
+        <select ng-model="camCtrl.options.dimension">
+            <option ng-repeat='dim in camCtrl.dimensions'>{{dim}}</option>
+        </select>
+    </label>
+    <span> (сейчас: {{camCtrl.options.dimension}})</span>
+</div>
+
+<!-- <div id='photo_place'> -->
+    <img 
         id='photo' 
         alt='photo will be here' 
         ng-src="{{camCtrl.photo_src}}" 
         ng-show="camCtrl.photo_src!==''" 
-    ></p>
+    >
+<!-- </div> -->
     
-    <p><button 
-        id='photo_button' 
-        ng-click="camCtrl.takeAPhoto()" 
-    >Take a photo</button></p>
-</fieldset>
+<button 
+    id='photo_button' 
+    class='float' 
+    ng-click="camCtrl.takeAPhoto()" 
+>Take a photo</button>

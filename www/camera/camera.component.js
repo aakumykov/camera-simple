@@ -9,7 +9,8 @@ function CameraController(){
 		'160x120',
 		'320x240',
 		'640x480',
-		'800x600'
+		'800x600',
+		'1024x768',
 	];
 
 	this.options = {
