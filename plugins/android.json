@@ -9,7 +9,17 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "ru.andrey.simplecameracomponent"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "ru.andrey.simplecameracomponent"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "ru.andrey.simplecameracomponent"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "ru.andrey.simplecameracomponent"
+        }
+    }
 }
