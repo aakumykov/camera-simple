@@ -1,4 +1,11 @@
-<img id='photo' alt='photo will be here' ng-src="{{camCtrl.photo_src}}" ng-show="camCtrl.photo_src!==''">
+<img id='photo' 
+    alt='photo will be here' 
+    ng-src="{{camCtrl.photo_src}}" 
+    
+    ng-style="{{ camCtrl.photo.size() }}" 
+>
+
+<!-- ng-show="camCtrl.photo_src!==''"  -->
 
 <div id='info' class='over'>
     <ul>
