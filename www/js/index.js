@@ -4,15 +4,25 @@ var app = angular.module("CameraApp",[
     'CameraModule',
 ]);
 
-document.addEventListener(
-    'deviceready',
+document.addEventListener('deviceready',
+    
     function(){
         var result = angular.bootstrap(document, ['CameraApp']) ? 'OK' : 'ERROR';
-        console.debug('deviceready, bootstraping Angular...'+result);
+    
+            console.debug('deviceready, bootstraping Angular...'+result);
 
-        console.debug('----- device info -----')
+            console.debug('----- device info -----')
+    
         for (var key in device) { var value = device[key]; if ('string'==typeof(value)) console.debug('device.'+key+': '+value); }
-        console.debug('----- device info -----')
+        
+            console.debug('----- device info -----')
     },
+
     false
 );
+
+document.addEventListener('resize', showWindowSize('resize'));
+
+function showWindowSize(msg){
+    console.debug('window ('+msg+'): '+window.innerWidth+'x'+window.innerHeight);
+}

@@ -7,6 +7,11 @@ function CameraController(){
 		console.log('device.platform: '+device.platform);
  
 	this.dimensions = [
+		'3x2',
+		'5x4',
+		'10x8',
+		'20x15',
+		'40x30',
 		'80x60',
 		'160x120',
 		'320x240',
@@ -16,7 +21,7 @@ function CameraController(){
 	];
 
 	this.options = {
-		dimension: this.dimensions[2],
+		dimension: this.dimensions[8],
 	};
 
 
