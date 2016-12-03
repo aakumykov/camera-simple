@@ -98,7 +98,9 @@ function CameraController(){
 
 angular.module('CameraModule',[]).
 component('camera',{
-	templateUrl: 'camera/camera.template.html',
+	templateUrl: function(){
+		return 'camera/camera.template.html';
+	},
 	controller: CameraController,
 	controllerAs: 'camCtrl',
 });
